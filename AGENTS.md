@@ -65,6 +65,7 @@
 | 事务、幂等、超时、降级、可观测、压测 | `reference/09-production-engineering.md` |
 | 研发流程、规范、测试、安全、文档 | `reference/10-enterprise-process.md` |
 | 安全与密码学、加密应用设计 | `reference/11-security-crypto.md` |
+| 前端与网站：HTML/CSS、TypeScript、Vue 3、组件与状态管理、前端工程化与部署、质量与性能 | `reference/13-frontend-web.md` |
 | 账本 / 计划 / 排查记录 / 决策记录 / 交付检查单 | `templates/` |
 
 ## 档案与隐私

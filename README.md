@@ -17,7 +17,7 @@ git clone https://github.com/lly1216/skill.git
 | 项目 | 说明 |
 | --- | --- |
 | 许可 | [MIT](LICENSE)，版权归 lly1216 |
-| 版本 | 0.2.0，见 [CHANGELOG.md](CHANGELOG.md) |
+| 版本 | 0.3.0，见 [CHANGELOG.md](CHANGELOG.md) |
 | 格式 | Agent Skills 开放标准：`SKILL.md` + YAML frontmatter（`name`、`description`） |
 | 语言 | 技能正文为简体中文 |
 
@@ -34,7 +34,7 @@ git clone https://github.com/lly1216/skill.git
 
 ## 3. 能力范围
 
-三条主线，外加贯穿三线的生产级可靠性要求。
+四条主线，外加贯穿四线的生产级可靠性要求。
 
 ### 3.1 后端与数据
 
@@ -43,14 +43,22 @@ git clone https://github.com/lly1216/skill.git
 - PostgreSQL 设计与索引、事务与隔离级别、迁移（Alembic）、Redis 缓存与失效策略。
 - 实时链路：WebSocket / MQTT 的消息语义、断线重连、去重与幂等。
 
-### 3.2 服务器与运维
+### 3.2 前端与网站
+
+- HTML / CSS 与布局（Flex、Grid、响应式、移动端适配）、语义化与可访问性基础。
+- TypeScript 工程化：严格模式、类型设计、与后端 OpenAPI / Pydantic 类型的对应关系。
+- Vue 3 为主：Composition API、组件契约、路由与守卫、Pinia 状态管理、请求层封装，并给出 React 关键差异对照。
+- 前端工程化与交付：Vite、环境变量与密钥边界、构建产物与 Nginx 部署（含前端路由 `try_files`）、
+  静态资源 hash 与缓存策略；组件测试、E2E 入门、首屏与包体积优化。
+
+### 3.3 服务器与运维
 
 - Linux 基础与排障：进程、端口、文件句柄、磁盘、网络，按现象逐层定位而不是乱试命令。
 - Nginx 反向代理与 HTTPS、静态资源与限流；Docker / Compose、镜像分层与环境一致性。
 - CI/CD 流水线（lint → test → build → 部署 → 冒烟 → 回滚），四套环境的配置注入方式。
 - 监控告警、日志与追踪、备份与恢复演练、容量与成本控制。
 
-### 3.3 机器人与嵌入式
+### 3.4 机器人与嵌入式
 
 - ROS 2：节点 / 话题 / 服务 / 动作、TF 与坐标系、QoS 与实时性、常见通信故障排查。
 - 传感器接入与标定、SLAM 建图与定位、Nav2 导航与避障调试。
@@ -58,9 +66,9 @@ git clone https://github.com/lly1216/skill.git
 - 四足运控算法与分级安全门禁：`G0 仿真 → G1 低速低力矩 → G2 单腿悬空 → G3 站立平衡 →
   G4 整机低速 → G5 常规运行`，未过闸不得进入下一级。
 
-### 3.4 贯穿三线
+### 3.5 贯穿四线
 
-生产级可靠性（幂等、超时、降级、可观测、压测）与安全（加密存储、密钥管理、审计、依赖漏洞）
+生产级可靠性（幂等、超时、降级、可观测、压测）、异步任务队列与微服务拆分取舍、安全（加密存储、密钥管理、审计、依赖漏洞）
 以及企业交付标准（`templates/dod.md` 的 Definition of Done 检查单）。
 
 ## 4. 安装
@@ -128,8 +136,8 @@ pwsh -File .\install\install.ps1 -Target ".\.claude\skills\engineering-mentor"
 `.gitignore`、`AGENTS.md`、`.git` 与两个私有文件：
 
 ```powershell
-# Windows PowerShell：输出 dist/engineering-mentor-0.2.0.zip
-pwsh -File .\install\make-skill-zip.ps1 -Version 0.2.0 -OutDir .\dist
+# Windows PowerShell：输出 dist/engineering-mentor-0.3.0.zip
+pwsh -File .\install\make-skill-zip.ps1 -Version 0.3.0 -OutDir .\dist
 ```
 
 ZIP 内的结构是根下 `engineering-mentor/`，其第一层直接是 `SKILL.md`。仓库目前只提供
@@ -170,7 +178,7 @@ Gemini CLI 需要把 `context.fileName` 设为 `AGENTS.md`（同时按 4.2 节�
 | --- | --- |
 | `SKILL.md` | 主协议与 Agent Skills 入口：frontmatter 的 `name`、`description` 决定何时被自动匹配 |
 | `AGENTS.md` | 规则类工具（Codex、Cursor、Gemini CLI 等）的通用适配入口，正文为协议要点摘要 |
-| `reference/` | 专题文档，按需读取：`01` 教学细则、`02` 计算机与工程基础、`03` 后端、`04` 数据与 API、`05` 服务器运维、`06` ROS 2、`07` 嵌入式与总线、`08` 运控与安全、`09` 生产级工程、`10` 研发流程、`11` 安全与密码学 |
+| `reference/` | 专题文档，按需读取：`01` 教学细则、`02` 计算机与工程基础、`03` 后端、`04` 数据与 API、`05` 服务器运维、`06` ROS 2、`07` 嵌入式与总线、`08` 运控与安全、`09` 生产级工程、`10` 研发流程、`11` 安全与密码学、`13` 前端与网站 |
 | `templates/` | `progress.md` 进度账本、`lesson-plan.md` 学习计划、`error-triage.md` 排查记录、`adr.md` 架构决策、`dod.md` 交付检查单、`projects-context.md` 项目上下文模板 |
 | `install/` | 安装与打包脚本：`install.ps1`、`install.sh`、`make-skill-zip.ps1` |
 | `README.md`、`LICENSE`、`CHANGELOG.md`、`.gitignore` | 仓库级文件；`.gitignore` 是隐私防线，见第 7 节 |
@@ -183,7 +191,7 @@ Gemini CLI 需要把 `context.fileName` 设为 `AGENTS.md`（同时按 4.2 节�
 三种触发方式：
 
 1. **自动匹配**：把技能放到工具的技能目录后，描述与任务相关时会自动加载（`description` 已覆盖学习、
-   讲原理、带做项目、代码审查，以及后端、运维、机器人三类技术主题）。
+   讲原理、带做项目、代码审查，以及后端、前端、运维、机器人四类技术主题）。
 2. **显式点名**：在支持手动调用的工具里直接输入技能名 `engineering-mentor`（具体召唤语法以宿主文档为准）。
 3. **贴进系统提示**：对不支持技能机制的工具，把 `SKILL.md` 全文（或 `AGENTS.md`）粘进对话或系统提示。
 

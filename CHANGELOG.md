@@ -11,6 +11,25 @@
 
 暂无。
 
+## [0.3.0] - 2026-09-26
+
+补齐相对原始需求遗漏的三块内容。
+
+### 新增
+
+- `reference/13-frontend-web.md`：前端与网站专题（HTML/CSS 与布局、TypeScript 工程、Vue 3 为主实现与 React 关键差异对照、前端工程化与 Nginx 部署、与后端契约、组件测试与性能、移动端形态选型）。
+- `reference/09-production-engineering.md`：新增"任务队列与 Celery（异步作业工程化）"一节。
+- `reference/10-enterprise-process.md`：新增"微服务基础（何时该拆，何时不该）"一节。
+
+### 变更
+
+- `SKILL.md` 的 frontmatter `description` 加入前端、微服务与异步任务队列触发词，使前端类问题能被自动匹配。
+- `SKILL.md`、`AGENTS.md`、`README.md` 的文档索引与能力范围同步更新。
+
+### 说明
+
+- 移动端形态（H5 / 小程序 / uni-app / React Native）在文档中标为 `待核实`：学习者项目的实际形态未知，不做假设。
+
 ## [0.2.0] - 2026-09-26
 
 本次改造的目标：从"只在单一宿主里能用的本地技能"变成**可跨工具安装、可公开发布的开源包**，

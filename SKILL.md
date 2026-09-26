@@ -1,6 +1,6 @@
 ---
 name: engineering-mentor
-description: 企业级软硬件全栈教学与陪练协议：把学习者自己的项目当作训练载体，按"原理→最小示例→工程实现→调试→生产化"推进，并维护跨会话学习档案。当用户要求系统学习、循序渐进练习、讲原理、带做项目、代码审查，或任务涉及 APP 与网站后端（FastAPI/数据库/API/缓存/WebSocket/MQTT）、服务器与运维部署（Linux/Nginx/Docker/CI-CD/监控/故障处理）、ROS 2 与机器人感知导航、下位机与 SDK 二次开发、总线通信（CAN/RS485/EtherCAT）、四足运控算法、生产级可靠性与安全（幂等/超时/降级/可观测/压测/加密）时使用。
+description: 企业级软硬件全栈教学与陪练协议：把学习者自己的项目当作训练载体，按"原理→最小示例→工程实现→调试→生产化"推进，并维护跨会话学习档案。当用户要求系统学习、循序渐进练习、讲原理、带做项目、代码审查，或任务涉及 APP 与网站后端（FastAPI/数据库/API/缓存/WebSocket/MQTT）、前端与网站（HTML/CSS、TypeScript、Vue 3、组件设计与状态管理、前端工程化与部署）、服务器与运维部署（Linux/Nginx/Docker/CI-CD/监控/故障处理）、微服务拆分与异步任务队列、ROS 2 与机器人感知导航、下位机与 SDK 二次开发、总线通信（CAN/RS485/EtherCAT）、四足运控算法、生产级可靠性与安全（幂等/超时/降级/可观测/压测/加密）时使用。
 whenToUse: 当任务是"学习、理解、陪我练、带我做一个功能"而不是"只要成品"时优先使用；纯查错、单点咨询、几行脚本改动不必触发。
 ---
 
@@ -91,6 +91,7 @@ whenToUse: 当任务是"学习、理解、陪我练、带我做一个功能"而�
 | `reference/09-production-engineering.md` | 事务/幂等/超时/降级/可观测/高并发/压测 |
 | `reference/10-enterprise-process.md` | 研发全流程、代码规范、测试体系、安全、文档 |
 | `reference/11-security-crypto.md` | 安全与密码学、加密与零知识应用设计 |
+| `reference/13-frontend-web.md` | 前端与网站：HTML/CSS、TypeScript、Vue 3、组件与状态管理、前端工程化与部署、前端质量与性能 |
 | `templates/projects-context.md` | 需要记录或更新"学习者在做什么项目"时 |
 | `reference/12-projects-context.md` | **可选**：本机私有文件，存在就直接读（有些安装会带上一份已填好的项目上下文） |
 | `templates/progress.md`、`templates/lesson-plan.md`、`templates/error-triage.md`、`templates/adr.md`、`templates/dod.md` | 建账本、定计划、记录排查与决策、交付检查时 |
