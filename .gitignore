@@ -1,0 +1,28 @@
+# ============================================================
+# 隐私防线：以下两个文件只保留在本地，绝不进公开仓库
+# ============================================================
+# 学习者原始诉求原文（含个人信息）
+reference/00-source-requirements.md
+# 学习者当前项目上下文（含项目细节）
+reference/12-projects-context.md
+
+# 学习档案（若在工作区/仓库内生成：progress.md、roadmap.md、
+# exercises/、notes/、triage/、projects.md 等）
+learning/
+
+# 打包产物（上传类工具用的 zip、构建输出）
+*.zip
+dist/
+
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 练习代码的 Python 产物
+__pycache__/
+*.py[cod]
+.venv/
+venv/
