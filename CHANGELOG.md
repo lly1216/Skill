@@ -9,7 +9,17 @@
 
 ## [Unreleased]
 
-暂无。
+### 新增
+
+- `skills/awesome-design-md/`：新增第二个技能。收录 54 份来自真实产品（Vercel、Stripe、Linear、Notion、Figma 等）的
+  `DESIGN.md` 设计系统文档，封装为可被 Agent 直接加载的技能：支持指定品牌匹配、按条件筛选推荐、
+  按项目类型主动推荐三条触发路径。设计文档内容源自
+  [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)（MIT），归属声明见该目录下的 `LICENSE`。
+
+### 变更
+
+- `README.md`：新增 1.1 节「本仓库收录的技能」索引表，并在第 5 节目录结构中补充 `skills/` 说明。
+  本仓库由此从单技能仓库变为技能集合仓库；`engineering-mentor` 的路径与内容未做任何改动。
 
 ## [0.3.0] - 2026-09-26
 

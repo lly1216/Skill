@@ -21,6 +21,17 @@ git clone https://github.com/lly1216/skill.git
 | 格式 | Agent Skills 开放标准：`SKILL.md` + YAML frontmatter（`name`、`description`） |
 | 语言 | 技能正文为简体中文 |
 
+## 1.1 本仓库收录的技能
+
+本仓库是技能集合：`engineering-mentor` 占仓库根目录，`skills/` 下按目录存放其他技能。
+
+| 技能 | 路径 | 说明 |
+| --- | --- | --- |
+| `engineering-mentor` | 仓库根目录 | 全栈工程教学与陪练协议（后端、前端、运维、机器人与嵌入式），进度沉淀为本地学习档案 |
+| `awesome-design-md` | [`skills/awesome-design-md/`](skills/awesome-design-md/) | 54 份真实产品的 DESIGN.md 设计系统；说「做成 Stripe 风格」即读取对应规范生成品牌级 UI |
+
+各技能自带独立 `README.md` 与安装说明，互不影响。
+
 ## 2. 这是什么
 
 这是一份**工作协议**，不是人格设定：安装后它按固定流程工作，不扮演角色、不写开场白。
@@ -181,6 +192,7 @@ Gemini CLI 需要把 `context.fileName` 设为 `AGENTS.md`（同时按 4.2 节�
 | `reference/` | 专题文档，按需读取：`01` 教学细则、`02` 计算机与工程基础、`03` 后端、`04` 数据与 API、`05` 服务器运维、`06` ROS 2、`07` 嵌入式与总线、`08` 运控与安全、`09` 生产级工程、`10` 研发流程、`11` 安全与密码学、`13` 前端与网站 |
 | `templates/` | `progress.md` 进度账本、`lesson-plan.md` 学习计划、`error-triage.md` 排查记录、`adr.md` 架构决策、`dod.md` 交付检查单、`projects-context.md` 项目上下文模板 |
 | `install/` | 安装与打包脚本：`install.ps1`、`install.sh`、`make-skill-zip.ps1` |
+| `skills/` | 其他技能，每个子目录一份独立技能（当前：`skills/awesome-design-md/`） |
 | `README.md`、`LICENSE`、`CHANGELOG.md`、`.gitignore` | 仓库级文件；`.gitignore` 是隐私防线，见第 7 节 |
 
 `reference/00-source-requirements.md` 与 `reference/12-projects-context.md` 是**仅供本地使用**的私有文件，
@@ -264,5 +276,10 @@ WebSocket/MQTT), server and operations (Linux, Nginx, Docker, CI/CD, monitoring)
 robotics/embedded (ROS 2, SLAM/Nav2, MCU/SDK, CAN/RS485/EtherCAT, quadruped locomotion with a
 staged safety gate). Progress is kept in a **local** learning archive
 (`$ENGINEERING_MENTOR_HOME` → `./learning/` → `~/.engineering-mentor/`) that is never committed.
+
+This repository also hosts a second skill under `skills/`: **`awesome-design-md`**, a collection of
+54 `DESIGN.md` design-system documents extracted from real products (Vercel, Stripe, Linear, Notion,
+Figma, …). Tell the agent "make it look like Stripe" and it loads the matching spec as the design
+contract. Content originates from [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) (MIT).
 
 Licensed under MIT. See `README.md` §4 for per-tool install commands and `CHANGELOG.md` for version history.
